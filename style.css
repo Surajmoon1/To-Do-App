@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100dvh;
+    background-color: #212121;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: chocolate;
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+.main{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    color: wheat;
+    font-family: cursive;
+}
+
+.head{
+    margin-top: 5%;  
+    /* background-color: antiquewhite; */
+    min-height: 0%;
+    max-height: 70%;
+    /* border-radius: 20px; */
+    overflow-y: scroll;
+}
+
+
+#input{
+    border-radius: 20px;
+    width: 100%;  
+    position: relative;
+}
+
+#userInput{
+    outline: none;
+    border: none;
+    color: wheat;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 20px;
+    background: transparent;
+    font-size: larger;
+    font-weight: 700;
+    width: 25%;
+    background-color: #612901;
+    transition: all 1.5s ease-in-out;
+}
+
+#userInput:focus{
+    width: 91%;
+}
+
+#btn{
+    border: none;
+    outline: none;
+    background-color: rgb(255, 166, 0);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: larger;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+}
+
+#btn:hover{
+    scale: 1.04;
+
+}
+
+::placeholder{
+    color: wheat;
+}
+
+#toDoLists{
+    padding: 0 10px;
+}
+
+
+.list{
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 12px;
+    border-radius: 7px;
+    background-color: chocolate;
+    margin-bottom: 10px;
+    padding:  9px;
+    padding-right: 30px;
+    position: relative;
+}
+
+
+.checked{
+    text-decoration: line-through;
+    color: #ffa60072 !important;
+    transition: 1s;
+}
+
+.checks{
+    color: #ffa60072 !important;
+}
+
+.icon{
+    color: wheat;
+    cursor: pointer;   
+
+}
+
+.icon:hover{
+    scale: 1.05;
+}
+
+.text{
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .3s ease-in-out;
+    color: wheat;
+}
+
+.text:hover{
+    scale: 1.03;
+}
+
+.delete{
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 5px 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    color: wheat;
+}
+
+.delete:hover{
+    background-color: rgba(100, 66, 3, 0.473);
+    scale: 1.03;
+}
+
+@media (max-width: 600px){
+    .main{
+        width: 90%;
+    }
+
+    h1{
+        margin: 50px 0;
+    }
+
+    #userInput{
+        width: 35%;
+    }
+
+    #userInput:focus{
+        width: 80%;
+    }
+
+    .head{
+        max-height: 60%;
+    }
+}
